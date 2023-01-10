@@ -29,4 +29,17 @@ df = pd.DataFrame(
     columns = ['name','value']
 )
 
-df.to_feather(os.path.join(save_folder,"expense.feather"))
+# df.to_feather(os.path.join(save_folder,"expense.feather"))
+
+lst = [
+    ['BTC' , 0.00797919],
+    ['ETH' , 0.04119883],
+    ['MATIC' , 35.2268]
+]
+
+df = pd.DataFrame(
+    data = lst,
+    columns = ['crypto','amount']
+)
+
+df.to_feather(os.path.join(save_folder,'cryptos.feather'))
